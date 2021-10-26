@@ -1,0 +1,237 @@
+이미지 사이트 (저작권x)
+unsplash.com
+plxabay.com
+
+태그 정리
+
+strong = 글자강조
+
+h1 ~ h6 = 제목&글자크기
+
+br = 강제줄바꿈 (열리는태그만있음) </br> 없음
+
+p = 단락 or문단이라는 의미
+
+img = 사진
+src = source 
+<img src="이름.jpg" width="크기설정"> height="높이설정"> width or height 둘다쓰면 자동으로 픽셀 설정안됨 
+그러나 하나만 쓰면 가로세로 자동설정됨 alt="문구" 이미지안나올때 문구로 대체로 사용됨
+
+li= 목차 (list)
+ul= li와 같은 항목들은 그항목이 어디서부터 어디까지가 서로 연관된 항목인지를 연결해주는 태그
+(Unordered List) li의 부모태그를 가지고 있다.
+ol= (Ordered List) (숫자순서리스트 / ul과 마찬가지로 부모태그)
+ex) <ul>또는<ol>
+   <li>oo</li>
+   </ul>또는<ol> 로 감싸줘야함
+
+title= 웹페이지 이름변경 <title>oo</title>
+
+meta= 항상 <head> 요소 안에 들어가며 일반적으로 문자 집합, 페이지 설명, 키워드, 문서 작성자 및
+뷰포트 설정을 지정하는 데 사용 charset="utf-8" 은 문자를 웹페이지에 보이게하는역할 (안넣으면 문자깨짐)
+<meta charset="utf-8">
+
+body= 본문을 태그 
+
+head= - body을 설명하는태그 
+
+html= body와 head를 감싸는태그
+
+html 문서 구조
+
+<!doctype html>
+<html>  </html>
+
+
+<a>=링크 (anchor) 
+* <a href="링크하고싶은주소"> </a>
++ 새창으로 띄우고싶을땐 <a href="주소" target="_blank">
++ 클릭전에 링크알고싶을때  놓는 툴팁  +새창열기 <a href="주소" target="_blank" title="이름"
+
+iframe = 동영상 삽입태그
+
+*table*
+
+table border="1~oo)표크기+만들기 + 부모태그 <tr></tr>=행(가로) + <td></td>=열(세로) (표데이터)
+thead =테이블 헤드
+th=테이블데이터 굵게표시
+tbody =테이블 본문
+tfoot =테이블 맨하단 (위치 상관없이 맨하단으로 표시됨)
+td rowspan="2" 2칸의 세로 병합(값에따라변함)
+td colspan="3" 3칸의 가로 병합(값에따라변함)
+
+
+table 기본양식
+<table border="oo">
+<thead>
+<tr>
+<th>또는<td> </th>또는<td>
+</tr>
+</thead>
+<tbody>
+<th>또는<td> </th>또는<td>
+ex) <tfoot> ooooo</tfoot> 입력시 표 맨하단에 데이터값출력
+   <td rowspan="o">oo</td>
+   <td colspan="o">oo</td>
+</tbody>
+</table>
+
+
+*form*
+
+<form action"주소">= 웹페이지 이동양식
+input 태그는 열리는태그만 존재
+<input type> = 입력태그의 유형
+<input vlaue> = 입력태그의 초기값
+<input name> = 서버로 전달되는 이름
+<input text> = text박스생성
+<input password> = password박스생성
+<input type="submit"> = form action"주소"로 값을 전송하는박스
+ value="전송" 입력시 기본값이 전송으로변경됨
+
+ex) <input type="submit" value="전송"> 전송버튼의 박스생성
+
+ex)id : <input type="text" name="id"> 입력시 id입력하는박스생김 +value="자동값입력"
+name="id"는 링크이동할때 id값을 보내주는역할
+
+ex)pw : input type="password" name="pwd"
+name="pwd"는 링크이동할때 url에 pwd 값을 보내주는역할
+
+textarea=여러줄의 문자열을 입력할수있는양식 
+textarea cols="oo" oo개 문자입력가능하게함
+textarea lows="oo" oo개의 줄생성
+
+textarea의경우 form태그의 input태그안에서 value="oo"로 하는것이아니라
+<textarea>ooo</textarea> 사이에 입력하면 자동값입력됨
+ex) id : <input type="text" name="id" value="oo"> 하면 id박스에 oo 문구 자동생성
+   <textarea>oo</textaarea> 입력시 textarea박스안에 oo 문구 자동생성
+
+
+
+*option*
+
+option=선택할수있는것들 
+부모태그 select으로 묶어줘야함
+그러면 드랍다운리스트 생성 
+
+<select name="color"> 넣으면 컬러는 oo색이다 url에 정보전송됨 입력안하면 안뜸
+ex)  <form action="주소">
+    <select name="oo"> 
+    <option>파란색</option>
+    <option>붉은색</option>
+    </select>
+    <input type="submit">
+    </form>  
+태그입력시 파란색또는 붉은색 선택 후 값 전송하면 url에 oo=파란색 또는 붉은색 값전송된게 보임
+<select name="color" multiple> 입력시 다중선택가능 (컨트롤누른상태)
+<option value="black">검은색 </option> 넣으면 컴퓨터가 정보인식함
+ex)  <form action="주소">
+    <select name="oo"> 
+    <option value="blue">파란색</option>
+    <option value="red">붉은색</option>
+    </select>
+    <input type="submit">
+    </form>  
+위 예시와 다르게 파란색 선택 후 전송할경우 url에 oo=blue url에 표시됨
+
+
+
+
+*radio*
+
+<input="radio> 라디오버튼 생성
+radio의경우 name value 모두 값 지정해야하며 radio 태그는 네임값이 같은것들끼리 그룹핑이됨)
+<input type="radio"> <input type="radio"> <input type="radio"> 아무값없이 태그만 생성하면 1개만 생성됨
+따라서 oo<input type="radio"> ooo<input type="radio"> oooo<input type="radio"> 생성해줘야하는데
+이렇게 태그생성시 자동으로 중복선택이되게함
+그래서 중복선택이 되지않게 하려면 
+ex) <form action="주소">
+   붉은색 <input type="radio" name="color">
+   파란색 <input type="radio" name="color">
+   검은색 <input type="radio" name="color"> 
+   <input type="submit">
+   </form>
+위 태그처럼 생성하면 중복선택이 되지않고 그룹핑이 되어 하나만 선택할수있게 됨
+
+
+ex) <input type="radio" name="color"> 
+   <input type="radio" name="color2">의경우의 하나씩 선택됨
+
++각각의 선택지가 값이 되기위해서는 input type="radio" name="color" value="oo" 해줘야함
+그래야 제출했을때 url에 color=oo 이다라고 표시됨
+
+다중선택의 경우 <input type="checkbox ">
+태그양식은 동일함 
+
+ex) <form action="주소">
+   붉은색 <input type="checkbox" name="color" value="red">
+   파란색 <input type="checkbox" name="color" value="blue">
+   검은색 <input type="checkbox" name="color" value="black"> 
+   <input type="submit">
+   </form>
+
+페이지를 열었을때 자동으로 선택되게 하고싶을때
+<input type="radio" name="oo" value="oo" checked>
+또는 <input type="checkbox" name="oo" value="oo" checked>
+
+
+*button*
+input type="button" (버튼박스생김) + vlaue="oo" 입력시 버튼박스 oo으로 값 바뀜
+button의 경우 자바스크립트와 같이 써야함 button혼자서 쓰이는경우 거의 없음
+input type="reset" 재설정버튼 값생김 (누르면 입력한값 초기화)
+input type="hidden" name="oo" value="oo" 값입력시 눈에 보이지는않지만
+컴퓨터로 어떤값을 전송하는경우에 쓰임 
+ex) <form action="http//localhost/hidden.php">
+   id :<input type="text" name="id">
+    <input type="submit">
+    </form>
+의경우 id박스에 입력하면 url에 입력한값이 출력되지만
+
+    <form action="http//localhost/hidden.php">
+    <input type="hidden" name="hide" value="jongbin">
+    <input type="submit">
+</form>
+의 경우 아무것도 없는상태에 제출을 누르게되면 위 name태그와 value태그 값인 hide=jongbin가 url에 표시됨
+
+
+*label*
+
+label의 경우 text를 조금 더 가치있게 만들어주는 태그
+
+ex) <label for="oo">oooo</label>
+id : <input id="oo" type="text" name="id" value="oo"> 값을 입력하게되면
+기존 text태그양식인 id : <input type="text" name="id" value="oo">과 동일하지만
+id : 의 행을 클릭 시 값을 입력할수있게 이동됨
+
+# id : <input type="text" name="id" value="oo"> 입력시 id : 를 커서에 놓고 클릭해도 아무반응이 없음
+
+그리고 같은입력값이지만 다른방법
+<label> id : <input type="text" name="id" value="oo"> </label> 입력을 해도 위 방법과 동일
+
+*method*
+
+form action="oooooooooo" method="get" >> 정보전송할때 url에 값 표시
+form action="oooooooooo" method="post" >> 정보전송할때 url에 값 숨김
+
+ex) <form action="http//localhost.dd/php" method="post">
+   password : <input type="password" name="pwd" value="defalut value">
+   <input type="submit">
+   </form>
+위와같이하면 url에 패스워드 표시안됨
+
+
+
+*file*
+
+파일 업로드 시 무조건 <form action="oooo" method="post" enctype="multipart/form-data"> 사용해야함
+<input type="file" name="oo"> 업로드가능한 선택박스 생김 file 태그도 name 설정해줘야함
+
+ex) <form action="http//localhost.dd/php" method="post" enctype="multipart/form-data">
+   <input type="file" name="box">
+   </form>
+
+
+
+
+
+
