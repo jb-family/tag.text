@@ -1,0 +1,340 @@
+이미지 사이트 (저작권x)
+unsplash.com
+plxabay.com
+
+태그 정리
+
+strong = 글자강조
+
+h1 ~ h6 = 제목&글자크기
+
+br = 강제줄바꿈 (열리는태그만있음) </br> 없음
+
+p = 단락 or문단이라는 의미
+
+img = 사진
+src = source 
+<img src="이름.jpg" width="크기설정"> height="높이설정"> width or height 둘다쓰면 자동으로 픽셀 설정안됨 
+그러나 하나만 쓰면 가로세로 자동설정됨 alt="문구" 이미지안나올때 문구로 대체로 사용됨
+
+li= 목차 (list)
+ul= li와 같은 항목들은 그항목이 어디서부터 어디까지가 서로 연관된 항목인지를 연결해주는 태그
+(Unordered List) li의 부모태그를 가지고 있다.
+ol= (Ordered List) (숫자순서리스트 / ul과 마찬가지로 부모태그)
+ex) <ul>또는<ol>
+   <li>oo</li>
+   </ul>또는<ol> 로 감싸줘야함
+
+title= 웹페이지 이름변경 <title>oo</title>
+
+meta= 항상 <head> 요소 안에 들어가며 일반적으로 문자 집합, 페이지 설명, 키워드, 문서 작성자 및
+뷰포트 설정을 지정하는 데 사용 charset="utf-8" 은 문자를 웹페이지에 보이게하는역할 (안넣으면 문자깨짐)
+<meta charset="utf-8"> 
+<meta name="description" content="웹페이지의 대한 설명"
+(잘모르겠지만 태그달고 웹사이트 접속하기전 커서가져다놓으면 설명이 나타나는태그인듯)
+<meta name="keywords" content="키워드 넣을 단어입력" ,로 여러개 나열가능)
+<meta name="author" content="저자이름"
+<meta http-equiv="refresh" content="oo" 입력한숫자대로 사이트 새로고침됨
+(meta는 인코딩한다고함)
+
+body= 본문을 태그 
+
+head= - body을 설명하는태그 
+
+html= body와 head를 감싸는태그
+
+html 문서 구조
+
+<!doctype html>
+<html>  </html>
+
+
+<a>=링크 (anchor) 
+* <a href="링크하고싶은주소"> </a>
++ 새창으로 띄우고싶을땐 <a href="주소" target="_blank">
++ 클릭전에 링크알고싶을때  놓는 툴팁  +새창열기 <a href="주소" target="_blank" title="이름"
+
+iframe = 동영상 삽입태그
+
+*table*
+
+table border="1~oo)표크기+만들기 + 부모태그 <tr></tr>=행(가로) + <td></td>=열(세로) (표데이터)
+thead =테이블 헤드
+th=테이블데이터 굵게표시
+tbody =테이블 본문
+tfoot =테이블 맨하단 (위치 상관없이 맨하단으로 표시됨)
+td rowspan="2" 2칸의 세로 병합(값에따라변함)
+td colspan="3" 3칸의 가로 병합(값에따라변함)
+
+
+table 기본양식
+<table border="oo">
+<thead>
+<tr>
+<th>또는<td> </th>또는<td>
+</tr>
+</thead>
+<tbody>
+<th>또는<td> </th>또는<td>
+ex) <tfoot> ooooo</tfoot> 입력시 표 맨하단에 데이터값출력
+   <td rowspan="o">oo</td>
+   <td colspan="o">oo</td>
+</tbody>
+</table>
+
+
+*form*
+
+<form action"주소">= 웹페이지 이동양식
+input 태그는 열리는태그만 존재
+<input type> = 입력태그의 유형
+<input vlaue> = 입력태그의 초기값
+<input name> = 서버로 전달되는 이름
+<input text> = text박스생성
+<input password> = password박스생성
+<input type="submit"> = form action"주소"로 값을 전송하는박스
+ value="전송" 입력시 기본값이 전송으로변경됨
+
+ex) <input type="submit" value="전송"> 전송버튼의 박스생성
+
+ex)id : <input type="text" name="id"> 입력시 id입력하는박스생김 +value="자동값입력"
+name="id"는 링크이동할때 id값을 보내주는역할 
+그리고 <input type="text" name="id"> 입력시 박스만 생성되지만 박스안에 글자를 넣고싶은경우
+<input type="text" name="id" placeholder="id를입력해주세요."> 작성하면 박스안에 글자생성됨
+글자생성되었지만 박스에 글자입력시 placeholder에 입력한 글자 사라짐
+추가적으로 웹페이지가 열렸을때 첫번째입력양식에 선택되게 하고싶을때 (검색창에 일일이 클릭안해도되게하는서비스)
+<input type="text" name="id" autofocus> 입력하면 웹페이지 접속 시 text박스에 커서가 자동으로 클릭되어있음
+
+
+
+ex)pw : input type="password" name="pwd"
+name="pwd"는 링크이동할때 url에 pwd 값을 보내주는역할
+그리고 <input type="password" name="pwd"> 입력시 박스만 생성되지만 박스안에 글자를 넣고싶은경우
+<input type="password" name="pwd" placeholder="패스워드를입력해주세요."> 작성하면 박스안에 글자생성됨
+글자생성되었지만 박스에 글자입력시 placeholder에 입력한 글자 사라짐
+추가적으로 웹페이지가 열렸을때 첫번째입력양식에 선택되게 하고싶을때 (검색창에 일일이 클릭안해도되게하는서비스)
+<input type="password" name="pwd" autofocus> 입력하면 웹페이지 접속 시 text박스에 커서가 자동으로 클릭되어있음
+
+
+<input type="number"=min="oo" max="oo">=번호입력박스생성되며 최소값과 최대값 지정할수있음
+ex) min값 10 max값15로 놓고 박스에 임의의 숫자99를 입력후 제출하는경우 오류메세지 나옴
+(최소값과 최대값벗어날수없음)
+<input type="number">의 경우 핸드폰으로 볼경우 터치하면 숫자패드가 나옴
+모바일과 굉장히 밀접하게 연관되어있음
+
+
+크게중요하진않으나 알아두면 좋은것들
+<input type="color"> 입력시 색상선택박스생성
+
+<input type="date" name="oo"> 입력시 연월일선택박스생성되며 날짜지정후 submit으로 제출하면
+url주소에 지정날짜표시됨
+
+<input type="month" name="oo"> 입력시 연월선택박스생성되며 날짜지정후 submit으로 제출하면
+url주소에 지정날짜표시됨
+
+<input type="week" name="oo"> 입력시 (날짜)주를 입력할때 쓰이는박스생성되며 날짜지정후 submit으로 제출하면
+url주소에 지정한 (날짜)주 표시됨
+
+<input type="time" name="oo"> 입력시 시간관련박스생성되며 시간지정후 submit으로제출하면 url주소에
+지정한 시간 표시됨
+
+<input type="email" name="oo"> 입력시 email입력박스생성되며 email양식에 맞게 작성후 submit으로 제출하면
+url에 입력한주소 표시됨 하지만 이메일양식으로 안하고 123123123123으로 제출시 오류메세지 나옴
+number태그와 마찬가지로 모바일에서 볼경우 터치시 영문및이메일양식쓸수있는 패드가 나옴
+
+<input type="range" name="oo" min="oo" max="oo"> 입력시 클릭하여 슬라이드로 자유롭게 이동하는버튼생성됨
+최소값과 최대값 지정할수있음
+ex) min값 0 max값10로 놓고 슬라이드생성된것을 움직인후 제출하면 움직여진 숫자가 url에 표시됨
+
+<input type="search" name="oo"> 입력시 찾고자하는 정보를 쉽게 찾을수있게하는 버튼이며 텍스트필드와 동일하지만 이것은
+검색할때쓰이는용도이다라고 구별할수있는태그 ( 정보로써의 가치를 높임)
+
+<input type="tel" name="oo"> 입력시 전화번호관련박스생성되며 모바일로 봤을때 터치 시 숫자패드나옴
+
+<input type="url" name="oo"> 입력시 url관련박스생성되며 url양식에 맞게 작성하지않으면 오류메세지나옴
+그리고 모바일로 봤을때 터치시 url을 입력하기쉬운 패드양식생성됨
+
+<form action="oo.ooo/php" autocomplete="on"> 태그를 사용하면 폼태그밑에있는 모든입력양식들이 
+자동완성기능이 활성화됨 비활성화도 할수있음 비활성화는 autocomplete="off"
+ex) input type=action="oo.ooo/php" autocomplete="on"
+   input type="text" name="id"
+   input type="password" name="pwd" 
+   input type="email" name="email"
+</form>
+입력하면 form태그 사이에있는 input태그들 모두 자동완성기능활성화되며 그중에서 패스워드는 끄고싶다면
+아래와같이 바꿔주면됨
+input type="password" name="pwd" autocomplete="off"
+
+
+
+*textarea*
+
+textarea=여러줄의 문자열을 입력할수있는양식 
+textarea cols="oo" oo개 문자입력가능하게함
+textarea lows="oo" oo개의 줄생성
+
+textarea의경우 form태그의 input태그안에서 value="oo"로 하는것이아니라
+<textarea>ooo</textarea> 사이에 입력하면 자동값입력됨
+ex) id : <input type="text" name="id" value="oo"> 하면 id박스에 oo 문구 자동생성
+   <textarea>oo</textaarea> 입력시 textarea박스안에 oo 문구 자동생성
+
+
+
+*option*
+
+option=선택할수있는것들 
+부모태그 select으로 묶어줘야함
+그러면 드랍다운리스트 생성 
+
+<select name="color"> 넣으면 컬러는 oo색이다 url에 정보전송됨 입력안하면 안뜸
+ex)  <form action="주소">
+    <select name="oo"> 
+    <option>파란색</option>
+    <option>붉은색</option>
+    </select>
+    <input type="submit">
+    </form>  
+태그입력시 파란색또는 붉은색 선택 후 값 전송하면 url에 oo=파란색 또는 붉은색 값전송된게 보임
+<select name="color" multiple> 입력시 다중선택가능 (컨트롤누른상태)
+<option value="black">검은색 </option> 넣으면 컴퓨터가 정보인식함
+ex)  <form action="주소">
+    <select name="oo"> 
+    <option value="blue">파란색</option>
+    <option value="red">붉은색</option>
+    </select>
+    <input type="submit">
+    </form>  
+위 예시와 다르게 파란색 선택 후 전송할경우 url에 oo=blue url에 표시됨
+
+
+
+
+*radio*
+
+<input="radio> 라디오버튼 생성
+radio의경우 name value 모두 값 지정해야하며 radio 태그는 네임값이 같은것들끼리 그룹핑이됨)
+<input type="radio"> <input type="radio"> <input type="radio"> 아무값없이 태그만 생성하면 1개만 생성됨
+따라서 oo<input type="radio"> ooo<input type="radio"> oooo<input type="radio"> 생성해줘야하는데
+이렇게 태그생성시 자동으로 중복선택이되게함
+그래서 중복선택이 되지않게 하려면 
+ex) <form action="주소">
+   붉은색 <input type="radio" name="color">
+   파란색 <input type="radio" name="color">
+   검은색 <input type="radio" name="color"> 
+   <input type="submit">
+   </form>
+위 태그처럼 생성하면 중복선택이 되지않고 그룹핑이 되어 하나만 선택할수있게 됨
+
+
+ex) <input type="radio" name="color"> 
+   <input type="radio" name="color2">의경우의 하나씩 선택됨
+
++각각의 선택지가 값이 되기위해서는 input type="radio" name="color" value="oo" 해줘야함
+그래야 제출했을때 url에 color=oo 이다라고 표시됨
+
+다중선택의 경우 <input type="checkbox ">
+태그양식은 동일함 
+
+ex) <form action="주소">
+   붉은색 <input type="checkbox" name="color" value="red">
+   파란색 <input type="checkbox" name="color" value="blue">
+   검은색 <input type="checkbox" name="color" value="black"> 
+   <input type="submit">
+   </form>
+
+페이지를 열었을때 자동으로 선택되게 하고싶을때
+<input type="radio" name="oo" value="oo" checked>
+또는 <input type="checkbox" name="oo" value="oo" checked>
+
+
+*button*
+input type="button" (버튼박스생김) + vlaue="oo" 입력시 버튼박스 oo으로 값 바뀜
+button의 경우 자바스크립트와 같이 써야함 button혼자서 쓰이는경우 거의 없음
+input type="reset" 재설정버튼 값생김 (누르면 입력한값 초기화)
+input type="hidden" name="oo" value="oo" 값입력시 눈에 보이지는않지만
+컴퓨터로 어떤값을 전송하는경우에 쓰임 
+ex) <form action="http//localhost/hidden.php">
+   id :<input type="text" name="id">
+    <input type="submit">
+    </form>
+의경우 id박스에 입력하면 url에 입력한값이 출력되지만
+
+    <form action="http//localhost/hidden.php">
+    <input type="hidden" name="hide" value="jongbin">
+    <input type="submit">
+</form>
+의 경우 아무것도 없는상태에 제출을 누르게되면 위 name태그와 value태그 값인 hide=jongbin가 url에 표시됨
+
+
+*label*
+
+label의 경우 text를 조금 더 가치있게 만들어주는 태그
+
+ex) <label for="oo">oooo</label>
+id : <input id="oo" type="text" name="id" value="oo"> 값을 입력하게되면
+기존 text태그양식인 id : <input type="text" name="id" value="oo">과 동일하지만
+id : 의 행을 클릭 시 값을 입력할수있게 이동됨
+
+# id : <input type="text" name="id" value="oo"> 입력시 id : 를 커서에 놓고 클릭해도 아무반응이 없음
+
+그리고 같은입력값이지만 다른방법
+<label> id : <input type="text" name="id" value="oo"> </label> 입력을 해도 위 방법과 동일
+
+*method*
+
+form action="oooooooooo" method="get" >> 정보전송할때 url에 값 표시
+form action="oooooooooo" method="post" >> 정보전송할때 url에 값 숨김
+
+ex) <form action="http//localhost.dd/php" method="post">
+   password : <input type="password" name="pwd" value="defalut value">
+   <input type="submit">
+   </form>
+위와같이하면 url에 패스워드 표시안됨
+
+
+
+*file*
+
+파일 업로드 시 무조건 <form action="oooo" method="post" enctype="multipart/form-data"> 사용해야함
+<input type="file" name="oo"> 업로드가능한 선택박스 생김 file 태그도 name 설정해줘야함
+
+ex) <form action="http//localhost.dd/php" method="post" enctype="multipart/form-data">
+   <input type="file" name="box">
+   </form>
+
+*semantic*
+(어떻게하면 태그의 가치를 좀더 높일수있는지)
+
+
+article= 본문
+asid= 광고와같이 페이지의 내용과는 관계가 적은내용들
+dtails= 기본적으로 표시되지않는 화면에 정보들을 정의
+figure= 삽화나 다이어그램과 같은 부가적인 요소를 정의
+footer=화면의 하단에 위치하는 사이트나 문서의 전체적인 정보
+header= 화면의 상단에 위치하는 사이트나 문서의 전체적인 정보
+main= 문서에서 가장 중심이 되는 컨텐츠
+mark= 참조나 하이라이트 표시를 필요로하는 문자를 말함
+nav= 문서의 네비게이션 항목을 말함
+section= 문서의 구획들을 정의
+time= 시간을 정의
+
+
+*정규표현식 어려움*
+required = 반드시 입력해야하는 값
+<input type="text" name="id" required> 입력 시 공란으로 전송 시 오류메세지 나타남
+
+pattern = 정규표현식 프로그래밍 언어로써 어떤문자나 패턴을 찾아내서 있는지 없는지 확인하는역할
+정규표현식에서 . 이 의미하는것은 모든문자를 허용 그리고 .이 1개면 단어1개만 입력가능
+<input type="text" name="id" pattern="[a-zA-z]"> 인경우 첫글자 a또는A만 허용하며 한글자이상 초과못함
+<input type="text" name="id" pattern="[a-zA-z]+"> 인경우 첫글자 a또는A만 허용하며 글자수무제한
+<input type="text" name="id" pattern="[a-zA-z]."> 인경우 첫글자는a나A가 와야하고 뒤로는 아무문자 허용가능 두글자까지허용되며
+그이상 초과못함
+<input type="text" name="id" pattern="[a-zA-z].+"> 인경우 첫글자는a또는A가 와야하며 뒤로는 아무문자허용가능하며 개수상관없음
+하지만 아무것도 입력하지않으면 오류메세지나옴
+<input type="text" name="id" pattern="[a-zA-z].+[0-9]">인경우 첫글자는a또는A가 와야하며 뒤로는 아무문자허용가능하며 개수상관없음 하지만
+끝은 숫자로 끝나야함  
+pattern은 엄청 다양하고 복잡하기때문에 오픈튜토리얼 생활코딩 사이트에 정규표현식 보는걸추천
+
+
+HTML 끝.
+
